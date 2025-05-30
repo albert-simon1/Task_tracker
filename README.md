@@ -29,4 +29,21 @@ Clasa DeleteTask este derivată din EditTask și se ocupă cu ștergerea unui ta
 Clasa RenameTask este derivată din EditTask și permite modificarea numelui unui task existent. Aceasta citește întregul fișier, modifică linia corespunzătoare task-ului și rescrie fișierul cu noul nume.
 
 Clasa ActionHandler este un wrapper similar cu CommandExecutor din prima parte, care gestionează execuția operațiilor pe task-uri prin intermediul unui pointer la clasa de bază Task_Manager. Asigură eliberarea corectă a memoriei prin destructor.
+
+// logger scrie intr-un fisier text si tine evidenta actiunilor care au loc atunci cand un utilizator incearca
+//sa se conecteze/daca exista sau nu utilizatorul, daca a gresit parola etc.
+//getInstance se asigura ca este o singura instanta a clasei; log(std::string message): scrie mesajul în log.txt (append).
+//Clasa SessionManager= Gestionează sesiunea utilizatorului – adică ține minte dacă un utilizator este conectat și cine este acel utilizator.
+//getInstance(): singleton.
+//login(username): setează utilizatorul curent ca logat.
+//logout(): deloghează utilizatorul.
+//isLoggedIn(): returnează true/false dacă există utilizator logat.
+//getCurrentUser(): returnează numele utilizatorului logat.
+//std::string User_files::cripted = "";
+//Clasa UserRegistry=Ține o listă internă cu utilizatori înregistrați în aplicație (doar în memorie, nu în fișier).
+//getInstance(): singleton.
+//login(username): setează utilizatorul curent ca logat.
+//logout(): deloghează utilizatorul.
+//isLoggedIn(): returnează true/false dacă există utilizator logat.
+//getCurrentUser(): returnează numele utilizatorului logat.
 */
